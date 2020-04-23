@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.8)
 
-set(This Example)
+set(This OrderTotalKata)
 
 project(${This} C CXX)
 
@@ -15,10 +15,10 @@ add_subdirectory(googletest)
 
 
 set(Headers
-    Example.hpp)
+    Item.hpp)
 
 set(Sources
-    Example.cpp)
+    Item.cpp)
 
 add_library(${This} STATIC ${Sources} ${Headers})
 
