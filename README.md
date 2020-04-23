@@ -1,3 +1,13 @@
+## CIS161 Project
+
+### Objectives
+
+1. Familiarize myself with CMake and googletest
+2. Practice TDD in C++
+3. Practice memory management
+---
+https://github.com/PillarTechnology/kata-checkout-order-total
+
 # Checkout Order Total Kata
 
 You have been contracted to write part of a grocery point-of-sale system. Your job is to implement the business logic to calculate the pre-tax total price as items are scanned or entered at checkout.
