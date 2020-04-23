@@ -59,4 +59,6 @@ build-vscode
 ### Code ###
 .vscode/*
 
+### GOOGLE TEST ###
+googletest
 # End of https://www.gitignore.io/api/c++,code,cmake
