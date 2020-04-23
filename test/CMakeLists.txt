@@ -3,13 +3,14 @@ cmake_minimum_required(VERSION 3.8)
 set(This OrderTotalKataTests)
 
 set(Sources
-    ItemTests.cpp)
+    ItemTests.cpp
+    TransactionTests.cpp)
 
 add_executable(${This} ${Sources})
 
 target_link_libraries(${This} PUBLIC
     gtest_main
-    OrderTotalKata    
+    OrderTotalKata
 )
 
 add_test(
