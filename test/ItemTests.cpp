@@ -1,4 +1,4 @@
 #include <gtest/gtest.h>
-TEST(ExampleTests, DemonstrateGTestMacros){
-    EXPECT_TRUE(false);
+TEST(ItemTests, SmokeTest){
+    EXPECT_TRUE(true);
 }
