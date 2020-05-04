@@ -1,19 +1,22 @@
 #ifndef TRANSACTION_HPP
 #define TRANSACTION_HPP
 #include <unordered_map>
+#include <vector>
 #include <string>
+#include "Item.hpp"
 using namespace std;
 class Transaction
 {
 private:
-    unordered_map<string, double> items;
+    vector<Item> items;
     unordered_map<string, double> priceDB;
 
 public:
     Transaction();
     Transaction(unordered_map<string, double> *priceDB);
     ~Transaction();
-    unordered_map<string, double> getItems();
+    vector<Item> getItems();
     unordered_map<string, double> getPriceDB();
+    void scan(std::string);
 };
 #endif // !TRANSACTION_HPP
