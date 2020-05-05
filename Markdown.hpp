@@ -7,9 +7,10 @@ class Markdown
 private:
     std::string itemName;
     double discountPerUnit;
+    int limit;
 public:
     Markdown();
-    Markdown(std::string, double);
+    Markdown(std::string, double, int=0);
     double getDiscountPerUnit();
     void setDiscountPerUnit(double);
     double calculateDiscountAmount(std::vector<Item>);

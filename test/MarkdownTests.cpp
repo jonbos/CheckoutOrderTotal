@@ -28,3 +28,28 @@ TEST(MarkdownTests, MarkdownShouldCalculateDiscountForSingleItem)
     double disc = tenCentsOff->calculateDiscountAmount(items);
     ASSERT_DOUBLE_EQ(disc, .1);
 }
+TEST(MarkdownTests, MarkdownShouldCalculateDiscountForMultipleItems)
+{
+    std::vector<Item> items;
+    Item *soup = new Item("soup", 1.89, 1.0);
+    items.push_back(*soup);
+    items.push_back(*soup);
+    Markdown *tenCentsOff = new Markdown("soup", .1);
+    double disc = tenCentsOff->calculateDiscountAmount(items);
+    ASSERT_DOUBLE_EQ(disc, .2);
+}
+
+TEST(MarkdownTests, MarkdownShouldEnforeLimits)
+{
+    std::vector<Item> items;
+    Item *soup = new Item("soup", 1.89, 1.0);
+    items.push_back(*soup);
+    items.push_back(*soup);
+    items.push_back(*soup);
+
+    Markdown *tenCentsOff = new Markdown("soup", .1, 2);
+
+    double disc = tenCentsOff->calculateDiscountAmount(items);
+
+    ASSERT_DOUBLE_EQ(disc, .2);
+}
