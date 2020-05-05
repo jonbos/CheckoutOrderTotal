@@ -6,7 +6,6 @@
 class Markdown : public Special
 {
 private:
-    std::string itemName;
     double discountPerUnit;
     int limit;
 public:
