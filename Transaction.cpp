@@ -32,3 +32,15 @@ double Transaction::calculateTotal()
     }
     return total;
 }
+void Transaction::addSpecial(Special special)
+{
+    this->specialDB.push_back(special);
+}
+vector<Special> Transaction::getSpecialDB()
+{
+    return this->specialDB;
+}
+void Transaction::setSpecialDB(vector<Special> specials)
+{
+    this->specialDB = specials;
+}
