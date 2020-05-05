@@ -16,11 +16,13 @@ add_subdirectory(googletest)
 
 set(Headers
     Item.hpp
-    Transaction.hpp)
+    Transaction.hpp
+    Markdown.hpp)
 
 set(Sources
     Item.cpp
-    Transaction.cpp)
+    Transaction.cpp
+    Markdown.cpp)
 
 add_library(${This} STATIC ${Sources} ${Headers})
 

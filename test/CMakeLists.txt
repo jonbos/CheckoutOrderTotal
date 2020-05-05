@@ -4,7 +4,8 @@ set(This OrderTotalKataTests)
 
 set(Sources
     ItemTests.cpp
-    TransactionTests.cpp)
+    TransactionTests.cpp
+    MarkdownTests.cpp)
 
 add_executable(${This} ${Sources})
 
