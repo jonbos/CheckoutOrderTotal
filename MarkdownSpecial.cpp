@@ -1,4 +1,4 @@
-#include "Markdown.hpp"
+#include "MarkdownSpecial.hpp"
 Markdown::Markdown(std::string itemName, double discount, int limit) :
     Special(itemName)
 {

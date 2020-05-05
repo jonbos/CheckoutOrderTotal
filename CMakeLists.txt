@@ -18,13 +18,13 @@ set(Headers
     Item.hpp
     Transaction.hpp
     Special.hpp
-    Markdown.hpp)
+    MarkdownSpecial.hpp)
 
 set(Sources
     Item.cpp
     Transaction.cpp
     Special.cpp
-    Markdown.cpp)
+    MarkdownSpecial.cpp)
 
 add_library(${This} STATIC ${Sources} ${Headers})
 

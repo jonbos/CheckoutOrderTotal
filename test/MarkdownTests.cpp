@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../Markdown.hpp"
+#include "../MarkdownSpecial.hpp"
 #include <vector>
 #include "../Item.hpp"
 TEST(MarkdownTests, CanCreateMarkdownWithNameAndDiscountAmount)
