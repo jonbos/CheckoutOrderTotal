@@ -18,5 +18,6 @@ public:
     vector<Item> getItems();
     unordered_map<string, double> getPriceDB();
     void scan(std::string);
+    double calculateTotal();
 };
 #endif // !TRANSACTION_HPP

@@ -23,3 +23,12 @@ void Transaction::scan(std::string sku)
     Item *i = new Item(sku, this->priceDB[sku]);
     this->items.push_back(*i);
 }
+double Transaction::calculateTotal()
+{
+    double total = 0;
+    for (Item item : this->items)
+    {
+        total += item.getPrice();
+    }
+    return total;
+}
