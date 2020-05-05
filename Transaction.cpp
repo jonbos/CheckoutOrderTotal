@@ -18,9 +18,9 @@ unordered_map<string, double> Transaction::getPriceDB()
 {
     return this->priceDB;
 }
-void Transaction::scan(std::string sku)
+void Transaction::scan(std::string sku, double units)
 {
-    Item *i = new Item(sku, this->priceDB[sku]);
+    Item *i = new Item(sku, this->priceDB[sku], units);
     this->items.push_back(*i);
 }
 double Transaction::calculateTotal()

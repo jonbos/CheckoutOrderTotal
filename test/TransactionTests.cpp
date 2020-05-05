@@ -30,5 +30,5 @@ TEST(TransactionTests, TransactionShouldCalculateTotalBasedOffItems)
     t->scan("soup");
     ASSERT_DOUBLE_EQ(t->calculateTotal(), priceDB["soup"]);
     t->scan("soup");
-    ASSERT_DOUBLE_EQ(t->calculateTotal(), priceDB["soup"]*2);
+    ASSERT_DOUBLE_EQ(t->calculateTotal(), priceDB["soup"] * 2);
 }
