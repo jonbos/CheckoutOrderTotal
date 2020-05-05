@@ -8,7 +8,12 @@ BuyXGetZSpecial::BuyXGetZSpecial(std::string itemName, int trigger, int discount
 
 double BuyXGetZSpecial::calculateDiscountAmount(std::vector<Item> items)
 {
-    return 0.0;
+    double totalUnits = this->getTotalUnits(items);
+    double itemPrice = items[0].getPrice();
+
+    int numDiscounts = this->calculateNumDiscounts(totalUnits);
+
+    return this->calculateDiscountValue(itemPrice) * numDiscounts * this->discountPercentage;
 }
 int BuyXGetZSpecial::getTrigger()
 {
@@ -21,4 +26,24 @@ int BuyXGetZSpecial::getDiscountCount()
 double BuyXGetZSpecial::getDiscountPercentage()
 {
     return this->discountPercentage;
+}
+int BuyXGetZSpecial::calculateNumDiscounts(int numUnits)
+{
+    return static_cast<int>(numUnits) / (this->trigger + this->discountCount);
+}
+double BuyXGetZSpecial::calculateDiscountValue(double itemPrice)
+{
+    return (itemPrice * (this->discountPercentage));
+}
+int BuyXGetZSpecial::getTotalUnits(std::vector<Item> items)
+{
+    int units = 0;
+    for (Item item : items)
+    {
+        if (item.getSku() == itemName)
+        {
+            units += item.getUnits();
+        }
+    }
+    return units;
 }

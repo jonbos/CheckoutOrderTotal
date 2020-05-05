@@ -9,6 +9,9 @@ private:
     int trigger;
     int discountCount;
     double discountPercentage;
+    int calculateNumDiscounts(int);
+    double calculateDiscountValue(double);
+    int getTotalUnits(std::vector<Item>);
 
 public:
     BuyXGetZSpecial(std::string, int, int, double);
