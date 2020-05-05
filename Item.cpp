@@ -4,11 +4,13 @@ Item::Item()
 {
     this->sku = "";
     this->price = 0;
+    this->units = 0;
 }
-Item::Item(std::string sku, double price)
+Item::Item(std::string sku, double price, double units)
 {
     this->sku = sku;
     this->price = price;
+    this->units = units;
 }
 std::string Item::getSku()
 {
