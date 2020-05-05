@@ -2,7 +2,8 @@
 #define MARKDOWN_HPP
 #include <vector>
 #include "Item.hpp"
-class Markdown
+#include "Special.hpp"
+class Markdown : public Special
 {
 private:
     std::string itemName;

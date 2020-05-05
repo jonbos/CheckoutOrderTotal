@@ -5,7 +5,7 @@
 #include "Item.hpp"
 class Special
 {
-private:
+protected:
     std::string itemName;
 public:
     Special();

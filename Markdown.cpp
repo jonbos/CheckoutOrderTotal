@@ -1,8 +1,7 @@
 #include "Markdown.hpp"
-
-Markdown::Markdown(std::string itemName, double discount, int limit)
+Markdown::Markdown(std::string itemName, double discount, int limit) :
+    Special(itemName)
 {
-    this->itemName = itemName;
     this->discountPerUnit = discount;
     this->limit = limit;
 }
@@ -25,7 +24,7 @@ int Markdown::calculateNumDiscounts(std::vector<Item> items)
 
     for (Item item : items)
     {
-        if (item.getSku() == this->itemName)
+        if (item.getSku() == this->getItemName())
         {
             discounts++;
         }
