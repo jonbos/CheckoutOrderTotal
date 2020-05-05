@@ -28,7 +28,7 @@ double Transaction::calculateTotal()
     double total = 0;
     for (Item item : this->items)
     {
-        total += item.getPrice();
+        total += item.getPrice() * item.getUnits();
     }
     return total;
 }

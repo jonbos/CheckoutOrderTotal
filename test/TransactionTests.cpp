@@ -32,3 +32,11 @@ TEST(TransactionTests, TransactionShouldCalculateTotalBasedOffItems)
     t->scan("soup");
     ASSERT_DOUBLE_EQ(t->calculateTotal(), priceDB["soup"] * 2);
 }
+TEST(TransactionTests, TransactionShouldAcceptWeight)
+{
+    unordered_map<string, double> priceDB;
+    priceDB["meat"] = 1.99; //Meat is 1.99/lb
+    Transaction *t = new Transaction(&priceDB);
+    t->scan("meat", 2.3);
+    ASSERT_DOUBLE_EQ(t->calculateTotal(), priceDB["meat"]*2.3);
+}

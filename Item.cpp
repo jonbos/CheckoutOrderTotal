@@ -24,11 +24,18 @@ double Item::getPrice()
 {
     return this->price;
 }
-void Item::setPrice(double)
+void Item::setPrice(double price)
 {
     this->price = price;
 }
-
+double Item::getUnits()
+{
+    return this->units;
+}
+void Item::setUnits(double units)
+{
+    this->units = units;
+}
 Item::~Item()
 {
 }
