@@ -19,6 +19,7 @@ public:
     void setPrice(double);
     int getLimit();
     void setLimit(int);
-    
+    int calculateNumDiscounts(std::vector<Item>);
+    double calculateDiscountValue(std::vector<Item>);
 };
 #endif // N_FOR_X_SPECIAL_HPP

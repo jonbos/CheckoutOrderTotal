@@ -8,7 +8,7 @@ NForXSpecial::NForXSpecial(std::string itemName, int trigger, double price, int 
 
 double NForXSpecial::calculateDiscountAmount(std::vector<Item> items)
 {
-    return 0;
+    return this->calculateNumDiscounts(items) * this->calculateDiscountValue(items);
 }
 int NForXSpecial::getTrigger()
 {
@@ -33,4 +33,20 @@ int NForXSpecial::getLimit()
 void NForXSpecial::setLimit(int limit)
 {
     this->limit = limit;
+}
+int NForXSpecial::calculateNumDiscounts(std::vector<Item> items)
+{
+    double totalUnits = this->calculateNumUnits(items);
+    if (this->limit > 0)
+    {
+        totalUnits = std::min(totalUnits, static_cast<double>(limit));
+    }
+    return static_cast<int>(totalUnits) / this->trigger;
+}
+double NForXSpecial::calculateDiscountValue(std::vector<Item> items){
+    if (!items.size()>0){
+        return 0;
+    }
+    double price = items[0].getPrice();
+    return (price*this->trigger) - this->price;
 }
