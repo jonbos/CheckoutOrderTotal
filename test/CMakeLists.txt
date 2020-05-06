@@ -6,7 +6,8 @@ set(Sources
     ItemTests.cpp
     TransactionTests.cpp
     MarkdownTests.cpp
-    BuyXGetZSpecialTests.cpp)
+    BuyXGetZSpecialTests.cpp
+    TransactionIntegrationTests.cpp)
 
 add_executable(${This} ${Sources})
 
