@@ -23,6 +23,6 @@ public:
     void setSpecialDB(vector<Special>);
     void scan(std::string, double=1.0);
     double calculateTotal();
-    void addSpecial(Special);
+    void addSpecial(Special&);
 };
 #endif // !TRANSACTION_HPP

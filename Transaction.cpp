@@ -32,7 +32,7 @@ double Transaction::calculateTotal()
     }
     return total;
 }
-void Transaction::addSpecial(Special special)
+void Transaction::addSpecial(Special &special)
 {
     this->specialDB.push_back(special);
 }
