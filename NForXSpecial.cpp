@@ -1,3 +1,10 @@
+/**
+    CIS161 
+    NForXSpecial.cpp
+    Purpose: Represents a N For $X special in a POS system
+
+    @author Jon Bos
+*/
 #include "NForXSpecial.hpp"
 NForXSpecial::NForXSpecial(std::string itemName, int trigger, double price, int limit) : Special(itemName)
 {

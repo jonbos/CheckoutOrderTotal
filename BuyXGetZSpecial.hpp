@@ -1,3 +1,10 @@
+/**
+    CIS161 
+    BuyXGetZSpecial.hpp
+    Purpose: Header file for BuyXGetZSpecial.cpp
+    @author Jon Bos
+*/
+
 #ifndef BUY_X_GET_Z_HPP
 #define BUY_X_GET_Z_HPP
 #include <vector>

@@ -1,3 +1,10 @@
+/**
+    CIS161 
+    NForXSpecial.hpp
+    Purpose: Header file for NForXSpecial class
+
+    @author Jon Bos
+*/
 #ifndef N_FOR_X_SPECIAL_HPP
 #define N_FOR_X_SPECIAL_HPP
 #include <vector>

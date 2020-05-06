@@ -1,3 +1,10 @@
+/**
+    CIS161 
+    MarkdownSpedcial.cpp
+    Purpose: Represents a Markdown special in a POS system
+
+    @author Jon Bos
+*/
 #include "MarkdownSpecial.hpp"
 Markdown::Markdown(std::string itemName, double discount, int limit) :
     Special(itemName)

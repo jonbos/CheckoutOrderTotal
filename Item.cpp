@@ -1,3 +1,10 @@
+/**
+    CIS161 
+    Item.cpp
+    Purpose: Represents an item in a POS system
+
+    @author Jon Bos
+*/
 #include "Item.hpp"
 
 Item::Item()

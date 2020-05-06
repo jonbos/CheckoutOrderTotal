@@ -1,3 +1,9 @@
+/**
+    CIS161 
+    NForXSpecialTests.cpp
+    Purpose: Unit tests for the NForXSpecial class
+    @author Jon Bos
+*/
 #include <gtest/gtest.h>
 #include "../NForXSpecial.hpp"
 #include <vector>

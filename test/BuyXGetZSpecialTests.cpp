@@ -1,3 +1,9 @@
+/**
+    CIS161 
+    BuyXGetZSpecialTests.cpp
+    Purpose: Unit tests for the BuyXGetZ class
+    @author Jon Bos
+*/
 #include <gtest/gtest.h>
 #include "../BuyXGetZSpecial.hpp"
 #include <vector>

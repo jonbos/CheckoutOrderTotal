@@ -1,3 +1,10 @@
+/**
+    CIS161 
+    Transaction.hpp
+    Purpose: Header file for Transaction class
+
+    @author Jon Bos
+*/
 #ifndef TRANSACTION_HPP
 #define TRANSACTION_HPP
 #include <unordered_map>

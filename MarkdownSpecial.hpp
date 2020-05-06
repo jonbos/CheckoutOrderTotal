@@ -1,3 +1,10 @@
+/**
+    CIS161 
+    MarkdownSpedcial.hpp
+    Purpose: Header file for MarkdownSpecial class
+
+    @author Jon Bos
+*/
 #ifndef MARKDOWN_HPP
 #define MARKDOWN_HPP
 #include <vector>

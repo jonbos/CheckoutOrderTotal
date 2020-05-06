@@ -1,3 +1,10 @@
+/**
+    CIS161 
+    BuyXGetZSpecial.cpp
+    Purpose: Represents a Buy X Get Z At N% Off special in a POS system
+
+    @author Jon Bos
+*/
 #include "BuyXGetZSpecial.hpp"
 BuyXGetZSpecial::BuyXGetZSpecial(std::string itemName, int trigger, int discountCount, double discountPercentage, int limit) : Special(itemName)
 {

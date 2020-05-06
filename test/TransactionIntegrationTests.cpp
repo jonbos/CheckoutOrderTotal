@@ -1,3 +1,9 @@
+/**
+    CIS161 
+    NForXSpecialTests.cpp
+    Purpose: Integration test for Transaction class
+    @author Jon Bos
+*/
 #include <gtest/gtest.h>
 #include "../Transaction.hpp"
 #include "../MarkdownSpecial.hpp"

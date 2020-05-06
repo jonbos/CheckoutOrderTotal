@@ -1,3 +1,9 @@
+/**
+    CIS161 
+    MarkdownTests.cpp
+    Purpose: Unit tests for the Markdown class
+    @author Jon Bos
+*/
 #include <gtest/gtest.h>
 #include "../MarkdownSpecial.hpp"
 #include <vector>

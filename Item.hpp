@@ -1,3 +1,10 @@
+/**
+    CIS161 
+    Item.hpp
+    Purpose: Header file for Item class
+
+    @author Jon Bos
+*/
 #ifndef ITEM_HPP
 #define ITEM_HPP
 

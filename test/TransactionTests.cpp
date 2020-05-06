@@ -1,3 +1,9 @@
+/**
+    CIS161 
+    TransactionTests.cpp
+    Purpose: Unit tests for the Transaction class
+    @author Jon Bos
+*/
 #include <gtest/gtest.h>
 #include "../Transaction.hpp"
 #include "../MarkdownSpecial.hpp"

@@ -1,3 +1,9 @@
+/**
+    CIS161 
+    ItemTests.cpp
+    Purpose: Unit tests for the item class
+    @author Jon Bos
+*/
 #include <gtest/gtest.h>
 #include "../Item.hpp"
 TEST(ItemTests, TestShouldCreateItemFromStringAndPrice)

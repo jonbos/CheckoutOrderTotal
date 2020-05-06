@@ -1,3 +1,10 @@
+/**
+    CIS161 
+    Transaction.cpp
+    Purpose: This class represents a transaction on a POS system
+
+    @author Jon Bos
+*/
 #include "Transaction.hpp"
 Transaction::Transaction()
 {
