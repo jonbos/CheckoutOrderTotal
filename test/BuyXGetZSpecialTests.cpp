@@ -24,3 +24,33 @@ TEST(MarkdownTests, BuyXGetZBOGOShouldMakeOneItemFree)
 
     ASSERT_DOUBLE_EQ(discount, 1.89);
 }
+TEST(MarkdownTests, BuyOneGetOneHalfOff)
+{
+    BuyXGetZSpecial *bogo = new BuyXGetZSpecial("soup", 1, 1, .50);
+    Item *soup = new Item("soup", 1.89, 1.0);
+    std::vector<Item> items;
+    items.push_back(*soup);
+    items.push_back(*soup);
+
+    double discount = bogo->calculateDiscountAmount(items);
+
+    ASSERT_DOUBLE_EQ(discount, .945);
+}
+TEST(MarkdownTests, TestShouldEnforceLimits)
+{
+    // BOGO, LIMIT 4 SHOULD ONLY MAKE 2 ITEMS FREE
+    BuyXGetZSpecial *bogo = new BuyXGetZSpecial("soup", 1, 1, 1, 4);
+    Item *soup = new Item("soup", 1.89, 1.0);
+    std::vector<Item> items;
+    items.push_back(*soup);
+    items.push_back(*soup);
+    items.push_back(*soup);
+    items.push_back(*soup);
+    items.push_back(*soup);
+    items.push_back(*soup);
+
+    double discount = bogo->calculateDiscountAmount(items);
+
+    ASSERT_DOUBLE_EQ(discount, 3.78);
+}
+

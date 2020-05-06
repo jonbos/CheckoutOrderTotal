@@ -1,9 +1,10 @@
 #include "BuyXGetZSpecial.hpp"
-BuyXGetZSpecial::BuyXGetZSpecial(std::string itemName, int trigger, int discountCount, double discountPercentage) : Special(itemName)
+BuyXGetZSpecial::BuyXGetZSpecial(std::string itemName, int trigger, int discountCount, double discountPercentage, int limit) : Special(itemName)
 {
     this->trigger = trigger;
     this->discountCount = discountCount;
     this->discountPercentage = discountPercentage;
+    this->limit = limit;
 }
 
 double BuyXGetZSpecial::calculateDiscountAmount(std::vector<Item> items)
@@ -13,7 +14,7 @@ double BuyXGetZSpecial::calculateDiscountAmount(std::vector<Item> items)
 
     int numDiscounts = this->calculateNumDiscounts(totalUnits);
 
-    return this->calculateDiscountValue(itemPrice) * numDiscounts * this->discountPercentage;
+    return this->calculateDiscountValue(itemPrice) * numDiscounts;
 }
 int BuyXGetZSpecial::getTrigger()
 {
@@ -44,6 +45,9 @@ int BuyXGetZSpecial::getTotalUnits(std::vector<Item> items)
         {
             units += item.getUnits();
         }
+    }
+    if (this->limit>0){
+        units=std::min(this->limit, units);
     }
     return units;
 }

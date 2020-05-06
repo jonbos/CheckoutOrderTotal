@@ -19,6 +19,7 @@ set(Headers
     Transaction.hpp
     Special.hpp
     MarkdownSpecial.hpp
+    NForXSpecial.hpp
     BuyXGetZSpecial.hpp)
 
 set(Sources
@@ -26,6 +27,7 @@ set(Sources
     Transaction.cpp
     Special.cpp
     MarkdownSpecial.cpp
+    NForXSpecial.cpp
     BuyXGetZSpecial.cpp)
 
 add_library(${This} STATIC ${Sources} ${Headers})

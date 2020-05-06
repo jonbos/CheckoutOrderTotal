@@ -9,12 +9,13 @@ private:
     int trigger;
     int discountCount;
     double discountPercentage;
+    int limit;
     int calculateNumDiscounts(int);
     double calculateDiscountValue(double);
     int getTotalUnits(std::vector<Item>);
 
 public:
-    BuyXGetZSpecial(std::string, int, int, double);
+    BuyXGetZSpecial(std::string, int, int, double, int=0);
     double calculateDiscountAmount(std::vector<Item>);
     int getTrigger();
     int getDiscountCount();
