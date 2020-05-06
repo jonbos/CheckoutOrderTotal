@@ -13,5 +13,6 @@ public:
     void setItemName(std::string name);
     std::string getItemName();
     virtual double calculateDiscountAmount(std::vector<Item>);
+    double calculateNumUnits(std::vector<Item>);
 };
 #endif // SPECIAL_HPP

@@ -17,3 +17,12 @@ double Special::calculateDiscountAmount(std::vector<Item> items)
 {
     throw "Not implemented";
 }
+double Special::calculateNumUnits(std::vector<Item> items){
+    double units = 0;
+    for (Item item : items ){
+        if (item.getSku() == this->getItemName()){
+            units += item.getUnits();
+        }
+    }
+    return units;
+}
